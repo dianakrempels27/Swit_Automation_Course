@@ -1,2 +1,2 @@
 const myString = "I love my country Ukraine";
-console.log(myString.indexOf("Ukraine"));
+console.log(myString.lastIndexOf);
