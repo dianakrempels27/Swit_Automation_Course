@@ -1,2 +1,5 @@
 const myString = "I love my country Ukraine";
-console.log(myString.lastIndexOf);
+function WordCount (myString) {
+    return myString.split(" ").length;
+}
+console.log(WordCount(myString));
