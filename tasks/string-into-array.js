@@ -16,3 +16,14 @@ function turnStringIntoArray(myString) {
     return myString.split(",");
 };
 console.log(turnStringIntoArray(myString));
+
+const newArray = [1,3,4,1,3,2,4,66,4,312,32,45,23,22,5,2,21,1,56,27,42,786,343,2,3,123,234,743,2,3];
+function filteredArray(newArray) {
+    return newArray.filter((number) => number < 100);
+}
+console.log(filteredArray(newArray));
+
+function convertedIntoString(newArray) {
+    return newArray.toString();
+};
+console.log(convertedIntoString(newArray));
