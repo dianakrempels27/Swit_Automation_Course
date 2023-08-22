@@ -9,7 +9,6 @@
  * Написати switch, який буде виводити масив елементів взалежності від обраного репортера
  * Протестити для всіх.
  * По замовчуванню має бути General Users Report;
-*/
 const reporter = "End Of Year Report";
 switch (reporter) {
     case "Primary User Report": 
@@ -27,3 +26,14 @@ switch (reporter) {
     default:
         console.log(["date", "users list", "user's job title", "user's work time"]);
 };
+*/
+
+const reporter = "End Of Year Report";
+function arrayOfElements(reporter) {
+    if (reporter === "End Of Year Report") {
+        return ["date", "period", "workind days", "users list", "holiday days"];
+    } else {
+        return ["date", "users list", "user's job title", "user's work time"];
+    }
+};
+console.log(arrayOfElements(reporter));
