@@ -18,10 +18,10 @@
  */
 
 
-const summaryUsers = [
+const users = [
 {
-user:"Diana",
-birthday:"April"
+    user:"Diana",
+    birthday:"April"
 },
 {
     user:"Lev",
@@ -37,6 +37,7 @@ birthday:"April"
 }
 ];
 
-switch (birthday) {
-    case 
-}
+const summaryUsers = users.filter(function (el) {
+    return el.birthday === "April";
+});
+console.log(summaryUsers);
