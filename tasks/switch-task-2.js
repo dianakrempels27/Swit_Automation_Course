@@ -61,6 +61,8 @@ users.forEach((user) => {
     case "August":
       summaryUsers[3].push(user.user);
       break;
+    default:
+      break;
   }
 });
 
