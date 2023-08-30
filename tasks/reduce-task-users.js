@@ -17,44 +17,18 @@ const users = [
     }
     ];
 
-const summaryUsers1 = users.reduce((acc, curr) => {
-    let season;
-    switch (curr.birthday) {
-    case "December":
-    case "January":
-    case "February":
-    season = "winter";
-    break;
-    case "March":
-    case "April":
-    case "May":
-    season = "spring";
-    break;
-    case "June":
-    case "July":
-    case "August":
-    season = "summer";
-    break;
-    case "September":
-    case "October":
-    case "November":
-    season = "autumn";
-    break;
-    default:
-    season = "unknown";
-    };
-
-    if (!acc[season]) {
-    acc[season] = [];
-    }
-    acc[season].push(curr.user);
-    
-    return acc;
+    const summaryUsers = users.reduce((acc, curr) => {
+        const season = Object.keys(seasons).find((key) => seasons[key].includes(curr.birthday));
+        return {
+            ...acc,
+            [season]: [
+                ...(acc[season] || []),
+                curr.user
+            ]
+        };
     }, {});
     
-    const autumnUsers = summaryUsers["autumn"] || [];
-    const winterUsers = summaryUsers["winter"] || [];
-    const springUsers = summaryUsers["spring"] || [];
-    const summerUsers = summaryUsers["summer"] || [];
+    console.log(summaryUsers); // { autumn: [ 'Diana' ], winter: [ 'Lev' ], summer: [ 'Eva' ], spring: [ 'Vita' ] }
     
-    console.log(summaryUsers1);
+    const finalResult = Object.values(summaryUsers).flat();
+    console.log(finalResult); // [ 'Diana', 'Lev', 'Eva', 'Vita' ]
