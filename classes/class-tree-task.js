@@ -27,14 +27,14 @@ class Wood {
     }
     
     plantTree(name, sort) {
-        let tree = new Tree(name, sort, true);
+        let tree = new Tree(name, sort, false);
         this.listTrees.push(tree);
         this.countOfTrees++;
     }
 
     cutDownTree(id) {
        let index = this.listTrees.findIndex(tree => tree.id === id);
-       if (index !== -1) {
+       if (index > -1) {
         this.listTrees.splice(index, 1);
         this.countOfTrees--;
        }
@@ -48,4 +48,4 @@ forest.plantTree("Дуб", "Звичайний");
 console.log(forest.countOfTrees);
 
 forest.cutDownTree(forest.listTrees[0].id);
-console.log(forest.countOfTrees);
+console.log(forest.listTrees);
