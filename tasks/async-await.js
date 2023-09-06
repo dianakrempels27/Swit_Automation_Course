@@ -12,10 +12,12 @@
 
 async function waitTimer(timer) {
     let i = 0;
-    while(timer > i) {
+    while(timer < i) {
         console.log(`Wait ${i} seconds`);
         i++;
     }
 }
 
-waitTimer(2);
+waitTimer(2).then(result => {
+    console.log(result);
+});
