@@ -27,3 +27,4 @@ function convertedIntoString(newArray) {
     return newArray.toString();
 };
 console.log(convertedIntoString(newArray));
+
