@@ -12,10 +12,11 @@
  * }
  */
 
+const product = {name:"", id:""};
 const shop = {
     title:"Kids",
     products:["dolls","car","piramida", "box", "sachok"],
-    view(product) {
+    view() {
         const result = `${product.name} product with ${product.id} id`;
         console.log(result);
         return result;
@@ -31,6 +32,9 @@ const shop = {
         return false;
     }
  }
- 
- const product = {name:"car", id:"100"};
+
+ product.name = "car";
+ product.id = "121";
+
+ shop.view();
  shop.buy(product.name);
