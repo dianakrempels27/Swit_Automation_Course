@@ -12,7 +12,7 @@
  * }
  */
 
-const product = {name:"", id:""};
+const product = {name:"car", id:"100"};
 const shop = {
     title:"Kids",
     products:["dolls","car","piramida", "box", "sachok"],
@@ -33,8 +33,5 @@ const shop = {
     }
  }
 
- product.name = "car";
- product.id = "121";
-
- shop.view();
- shop.buy(product.name);
+ shop.view.call(product);
+ shop.buy("car");
