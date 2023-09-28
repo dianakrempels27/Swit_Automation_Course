@@ -1,13 +1,13 @@
 describe("Create Post Test", () => {
     beforeEach(() => {
         cy.visit("http://stage3.switschooltest.com");
+        cy.login({
+            login:"diana.krempels1",
+            password:"09Tirogo&"
+        })
     })
 
     it("should be displayed post after creating it", () => {
-        cy.visit(Cypress.config('baseUrl') + '/login')
-        cy.get('input[name=login]').type("diana.krempels1")
-        cy.get('input[name=password').type("09Tirogo&")
-        cy.get('button[type="submit"]').click();
         cy.get('[href="/add-post"]').click();
         cy.get("h1").contains("Створити допис");
         cy.get("[type='file']").selectFile('London post.jpg')
