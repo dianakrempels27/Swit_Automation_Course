@@ -1,8 +1,109 @@
 [
     {
-        "title": "Top 10 books of the year",
-        "description": "The best books of 2023 including our top picks for each category of fiction, nonfiction, poetry, biographies, business, cookbooks, and more.",
-        "content": "Top 10 facts about books!",
-        "imageUrl": "London post.jpg"
+        "_id": "646f6a98d184f326eb3a37a3",
+        "title": "test",
+        "description": "test test",
+        "content": "test test test test 555",
+        "imageUrl": "/uploads/image-1685023384592-120333035.jpg",
+        "author": {
+            "_id": "6467dba6d184f326eb3a379b",
+            "email": "w@w.ua",
+            "name": "Имя1",
+            "surname": "Фамилия",
+            "imageUrl": "/uploads/image-1687776679313-124800615.jpg",
+            "about": "12345 sdfs",
+            "birthday": "11.11.1990",
+            "country": "Ua",
+            "nickname": "Test"
+        },
+        "createdAt": "2023-05-25T14:03:04.896Z",
+        "updatedAt": "2023-06-27T20:50:53.969Z",
+        "__v": 0
+    },
+    {
+        "_id": "64790e18d184f326eb3a37e9",
+        "title": "Перший допис",
+        "description": "Перший опис",
+        "content": "Перший текст",
+        "imageUrl": "/uploads/image-1685655064537-354310483.jpg",
+        "author": {
+            "_id": "64790de2d184f326eb3a37e5",
+            "email": "yevhenii.avdieienko@gmail.com"
+        },
+        "createdAt": "2023-06-01T21:31:04.782Z",
+        "updatedAt": "2023-06-01T21:31:04.782Z",
+        "__v": 0
+    },
+    {
+        "_id": "649d41ebcb7c6b933faea904",
+        "title": "Спортивні події у Львові",
+        "description": "У Львові відбудется змагання з футзалу, присвячине 30 річчу відкриття арени. Подія проходитиме з 15 серпня",
+        "content": "У Львові відбудется змагання з футзалу, присвячине 30 річчу відкриття арени. Подія проходитиме з 15 серпня",
+        "imageUrl": "/uploads/image-1688027627759-334123725.jpg",
+        "author": {
+            "_id": "649d40a4cb7c6b933faea8fa",
+            "email": "Powermedia.ua@gmail.com"
+        },
+        "createdAt": "2023-06-29T08:33:47.970Z",
+        "updatedAt": "2023-06-29T08:33:47.970Z",
+        "__v": 0
+    },
+    {
+        "_id": "64ba9fecac5e4231cd039187",
+        "title": "Hey",
+        "description": "Hii",
+        "content": "Hello",
+        "imageUrl": "/uploads/image-1689952236388-462171943.jpg",
+        "author": {
+            "_id": "64ba9f5cac5e4231cd039183",
+            "email": "test1@test.com",
+            "name": "Test1"
+        },
+        "createdAt": "2023-07-21T15:10:36.568Z",
+        "updatedAt": "2023-07-21T15:11:57.891Z",
+        "__v": 0
+    },
+    {
+        "_id": "64baa048ac5e4231cd039190",
+        "title": "Hey",
+        "description": "Hi",
+        "content": "Hello",
+        "imageUrl": "/uploads/image-1689952328427-230253252.jpg",
+        "author": {
+            "_id": "64ba9f5cac5e4231cd039183",
+            "email": "test1@test.com",
+            "name": "Test1"
+        },
+        "createdAt": "2023-07-21T15:12:08.610Z",
+        "updatedAt": "2023-07-21T15:12:08.610Z",
+        "__v": 0
+    },
+    {
+        "_id": "6516d329fd56a263d8f13270",
+        "title": "test post",
+        "description": "sdfsdfsdfs sdf sdf sdf sdf",
+        "content": "sdfsdf",
+        "imageUrl": "/uploads/image-1695994665410-469449373.jpg",
+        "author": {
+            "_id": "650c307efd56a263d8f130ce",
+            "email": "yulia-fiz.os@ukr.net"
+        },
+        "createdAt": "2023-09-29T13:37:45.992Z",
+        "updatedAt": "2023-09-29T13:37:45.992Z",
+        "__v": 0
+    },
+    {
+        "_id": "6516e5ccfd56a263d8f132a1",
+        "title": "Post 1",
+        "description": "Post 1 description",
+        "content": "Post 1 content",
+        "imageUrl": "/uploads/image-1685655064537-354310483.jpg",
+        "author": {
+            "_id": "650c307efd56a263d8f130ce",
+            "email": "yulia-fiz.os@ukr.net"
+        },
+        "createdAt": "2023-09-29T14:57:16.656Z",
+        "updatedAt": "2023-09-29T14:57:16.656Z",
+        "__v": 0
     }
 ]
