@@ -1,10 +1,9 @@
 describe("Create Post Test", () => {
     beforeEach(() => {
-        cy.login({
+        cy.loginMocked({
             login:"diana.krempels1",
             password:"09Tirogo&"
         })
-        cy.wait("@newPost");
     });
 
     it("should be deleted post after clicking on the Видалити допис button", () => {
