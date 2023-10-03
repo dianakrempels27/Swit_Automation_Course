@@ -17,3 +17,35 @@ Cypress.Commands.add("loginMocked", (user) => {
     cy.get('button[type="submit"]').click();
     cy.wait('@login');
 })
+
+Cypress.Commands.add("editProfile", (user) => {
+    cy.get("[href='/profile']").click();
+    cy.get("h1").contains("Профіль");
+    cy.get("[name='name']").clear().type(user.name);
+    cy.get("[placeholder='Прізвище']").clear().type(user.surname);
+    cy.get("[placeholder='Дата народження']").clear().type(user.birthday);
+    cy.get("[placeholder='Країна']").clear().type(user.country);
+    cy.get("[placeholder='Нікнейм']").clear().type(user.nickname);
+    cy.get("[name='about']").clear().type(user.about);
+    cy.get("[type='submit']").click();
+})
+
+Cypress.Commands.add("loginViaApi", () => {
+    cy.request({
+        method: "POST",
+        url: "https://unit1105.p-host.kiev.ua/login",
+        body: {
+            "login": "diana.krempels1",
+            "password": "09Tirogo&"
+        },
+        headers:{
+            "Content-Type":"application/json"
+        }
+    }).then((response) => {
+        expect(response.status).to.eq(200);
+        const token = response.body.token;
+        cy.window().then((win) => {
+            win.localStorage.setItem("token", token);
+          });
+    });
+});
