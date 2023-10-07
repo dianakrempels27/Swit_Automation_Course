@@ -44,8 +44,31 @@ Cypress.Commands.add("loginViaApi", () => {
     }).then((response) => {
         expect(response.status).to.eq(200);
         const token = response.body.token;
+        Cypress.env("token", token)
         cy.window().then((win) => {
             win.localStorage.setItem("token", token);
           });
+    });
+});
+
+Cypress.Commands.add("createPostViaApi", (title) => {
+    cy.request({
+        method: "POST",
+        url: "https://unit1105.p-host.kiev.ua/post",
+        body: {
+            "image": {
+                "0": {}
+            },
+            title,
+            "description": "hello everyone!",
+            "content": "fwjfowfjkwl",
+            "imageUrl": "/uploads/image-1696498724103-896383774.jpg"
+        },
+        headers: {
+            "Content-Type":"application/json",
+            "Authorization":`Bearer ${Cypress.env("token")}`
+        }
+    }).then((response) => {
+        expect(response.status).to.eq(200);
     });
 });
