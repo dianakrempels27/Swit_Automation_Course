@@ -1,6 +1,5 @@
 describe("delete post created by API", () => {
     beforeEach(() => {
-        cy.visit("http://stage3.switschooltest.com");
         cy.loginViaApi();
         cy.createPostViaApi("Test post via API");
         cy.visit("http://stage3.switschooltest.com");
