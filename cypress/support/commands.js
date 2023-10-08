@@ -44,10 +44,11 @@ Cypress.Commands.add("loginViaApi", () => {
     }).then((response) => {
         expect(response.status).to.eq(200);
         const token = response.body.token;
-        Cypress.env("token", token)
-        cy.window().then((win) => {
-            win.localStorage.setItem("token", token);
-          });
+        cy.setCookie("token", token);
+        Cypress.env("token", token);
+        //cy.window().then((win) => {
+            //win.localStorage.setItem("token", token);
+         // });
     });
 });
 
