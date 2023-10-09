@@ -14,14 +14,22 @@
 const data = require("./data");
 const moment = require("moment");
 
-function filterArrayByDate (arr, date) {
-    const filteredData = arr.filter(item => item.date === date);
-    return filteredData.map(item => item.email)
+const getEmails = (arr, date) => {
+    const filteredData = arr.filter(item => {
+        const itemDate = moment(item.date, ["DD/MM/YYYY", "MM/DD/YYYY", "MMM DD YYY"]).format("DD/MM/YYYY");
+        const convertedDate = moment(date, ["DD.MM.YYYY", "MMM DD YYYY"]).format("DD/MM/YYYY");
+        return itemDate === convertedDate;
+});
+        return filteredData.map(item => item.email)
 }
 
-const filteredData = filterArrayByDate (data, "Sep 25 2023");
+const filteredData = getEmails(data, "Sep 25 2023");
+console.log(filteredData);
 
-//console.log(data)
+//function filterArrayByDate (arr, date) {
+    //const filteredData = arr.filter(item => item.date === date);
+   // return filteredData.map(item => item.email)
+//}
 
-const now = moment("2023/10/10", "YYYY/MM/DD")
-console.log(now.format("DD/MM/YYYY"))
+//const now = moment("2023/10/10", "YYYY/MM/DD")
+//console.log(now.format("DD/MM/YYYY"))
