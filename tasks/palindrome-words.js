@@ -6,12 +6,7 @@
 function palindrome (string) {
     let result = string.toLowerCase();
     let stringArr = result.split("").reverse().join("");
-    
-    if (result === stringArr) {
-        return true
-    } else {
-        return false
-    }
+    return result === stringArr;
 };
 
 console.log(palindrome("Anna"));
