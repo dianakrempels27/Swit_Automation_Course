@@ -46,9 +46,10 @@ Cypress.Commands.add("loginViaApi", () => {
         const token = response.body.token;
         cy.setCookie("token", token);
         Cypress.env("token", token);
-        //cy.window().then((win) => {
-            //win.localStorage.setItem("token", token);
-         // });
+        cy.window().then((win) => {
+            win.localStorage.setItem("userData", JSON.stringify(response.body));
+            win.localStorage.setItem("isShowed", true);
+         });
     });
 });
 
