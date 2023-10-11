@@ -1,10 +1,7 @@
 describe("Create User Profile Test",  {testIsolation: false }, () => {
     beforeEach(() => {
         cy.visit("http://stage3.switschooltest.com");
-        cy.loginViaApi({
-            login:"diana.krempels1",
-            password:"09Tirogo&"
-        });
+        cy.loginViaApi();
         cy.editProfile({
             name:"Diana",
             surname: "Krempels",

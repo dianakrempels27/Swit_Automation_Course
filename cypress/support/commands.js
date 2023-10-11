@@ -30,13 +30,13 @@ Cypress.Commands.add("editProfile", (user) => {
     cy.get("[type='submit']").click();
 })
 
-Cypress.Commands.add("loginViaApi", () => {
+Cypress.Commands.add("loginViaApi", (login = "diana.krempels1", password = "09Tirogo&") => {
     cy.request({
         method: "POST",
         url: "https://unit1105.p-host.kiev.ua/login",
         body: {
-            "login": "diana.krempels1",
-            "password": "09Tirogo&"
+            "login":login,
+            "password":password
         },
         headers:{
             "Content-Type":"application/json"
