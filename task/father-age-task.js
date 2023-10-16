@@ -12,4 +12,4 @@ function countAgeOfTheFather(fatherYears, sonYears) {
     console.log("Father was twice as old " + ageDifference + " years ago");
 }
 
-countAgeOfTheFather(50, 20);
+countAgeOfTheFather(45, 20);
