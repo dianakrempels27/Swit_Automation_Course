@@ -1,4 +1,4 @@
-describe("Update post created by API", () => {
+describe("Delete post created by API", () => {
     beforeEach(() => {
         cy.loginViaApi();
         cy.visit("http://stage3.switschooltest.com");
