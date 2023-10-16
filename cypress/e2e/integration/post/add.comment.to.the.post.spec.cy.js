@@ -1,4 +1,4 @@
-describe("Update post created by API", () => {
+describe("Add comment to the post created by API", () => {
     beforeEach(() => {
         cy.loginViaApi();
         cy.createPostViaApi("Test post via API");
