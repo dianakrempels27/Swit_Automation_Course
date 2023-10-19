@@ -4,12 +4,8 @@
  */
 
 function countAgeOfTheFather(fatherYears, sonYears) {
-    let father = parseInt(fatherYears);
-    let son = parseInt(sonYears);
-
-    const ageDifference = father - (son * 2);
-
-    console.log("Father was twice as old " + ageDifference + " years ago");
+    fatherYears = parseInt(fatherYears);
+    sonYears = parseInt(sonYears);
 }
 
 countAgeOfTheFather(45, 20);
