@@ -1,7 +1,7 @@
 describe("Create User Profile Test",  {testIsolation: false }, () => {
     beforeEach(() => {
-        cy.visit("http://stage3.switschooltest.com");
         cy.loginViaApi();
+        cy.visit("http://stage3.switschooltest.com");
         cy.editProfile({
             name:"Diana",
             surname: "Krempels",

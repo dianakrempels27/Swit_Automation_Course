@@ -1,10 +1,7 @@
 describe("Create Post Test", () => {
     beforeEach(() => {
+        cy.loginViaApi();
         cy.visit("http://stage3.switschooltest.com");
-        cy.login({
-            login:"diana.krempels1",
-            password:"09Tirogo&"
-        })
     })
 
     it("should be deleted post after clicking on the Видалити допис button", () => {
