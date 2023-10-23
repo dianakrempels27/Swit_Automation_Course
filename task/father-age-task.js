@@ -3,13 +3,25 @@
  * Порахувати і вивести скільки років назад батько був у двара рази старший
  */
 
-function countAgeOfTheFather(fatherYears, sonYears) {
-    let father = parseInt(fatherYears);
-    let son = parseInt(sonYears);
-
-    const ageDifference = father - (son * 2);
-
-    console.log("Father was twice as old " + ageDifference + " years ago");
+function fatherSon(fatherYearsOld, sonYearsOld) {
+    let bool = false;
+    let years = 0;
+    while(sonYearsOld > 0) {
+        if(fatherYearsOld/sonYearsOld === 2) {
+            bool = true;
+            break;
+        } else {
+            years = years + 1;
+            fatherYearsOld = fatherYearsOld - 1;
+            sonYearsOld = sonYearsOld - 1;
+        }
+    } 
+    if(!bool) {
+        return "No such years";
+    } else {
+        return years;
+    }
 }
 
-countAgeOfTheFather(45, 20);
+const num = fatherSon(42, 22);
+console.log("num:", num);
