@@ -1,0 +1,30 @@
+[
+    {
+    "text": "wow",
+    "post": "65395a64fd56a263d8f13918",
+    "author": {
+        "_id": "65102afafd56a263d8f13154",
+        "name": "Diana",
+        "nickname": "Bulka",
+        "surname": "KrempelsKrempels"
+    },
+    "_id": "653a9b0bfd56a263d8f1395c",
+    "createdAt": "2023-10-26T16:59:55.299Z",
+    "updatedAt": "2023-10-26T16:59:55.299Z",
+    "__v": 0
+    },
+    {
+    "text": "incredible!",
+    "post": "65395a64fd56a263d8f13918",
+    "author": {
+        "_id": "65102afafd56a263d8f13154",
+        "name": "Diana",
+        "nickname": "Bulka",
+        "surname": "KrempelsKrempels"
+    },
+    "_id": "653a9b0bfd56a263d8f1395c",
+    "createdAt": "2023-10-26T16:59:55.299Z",
+    "updatedAt": "2023-10-26T16:59:55.299Z",
+    "__v": 0
+    }
+]
