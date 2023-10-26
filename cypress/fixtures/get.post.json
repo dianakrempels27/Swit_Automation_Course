@@ -105,5 +105,19 @@
         "createdAt": "2023-09-29T14:57:16.656Z",
         "updatedAt": "2023-09-29T14:57:16.656Z",
         "__v": 0
+    },
+    {
+        "_id": "64652030c68905060539f7ab",
+        "title": "Do you like Italy",
+        "description": "Post 1 description",
+        "content": "Post 1 content",
+        "imageUrl": "/uploads/image-1685655064537-354310483.jpg",
+        "author": {
+            "_id": "650c307efd56a263d8f130ce",
+            "email": "yulia-fiz.os@ukr.net"
+        },
+        "createdAt": "2023-09-29T14:57:16.656Z",
+        "updatedAt": "2023-09-29T14:57:16.656Z",
+        "__v": 0
     }
 ]
