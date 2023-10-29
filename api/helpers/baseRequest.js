@@ -9,15 +9,29 @@ class BaseRequest {
 
     //GET method
     async get(url, route, headers) {
-        const result = await handleErrors(chai.request(url)
-            .get(route)
-            .set(headers));
-        return result;
+       const result = await handleErrors(chai.request(url)
+           .get(route)
+           .set(headers));
+       return result;
     }
 //POST method
+    async post(url, route, headers, requestBody) {
+        const response = await handleErrors(chai.request(url)
+           .post(route)
+           .set(headers)
+           .send(requestBody));
+        return response;
+    }
 //PUT method
-//DELETE method
+   async put(url, route, headers, requestBody) {
+    const response = await handleErrors(chai.request(url)
+       .put(route)
+       .set(headers)
+       .send(requestBody));
+    return response;
 }
+}
+//DELETE method
 
 function handleErrors(promise) {
 return promise.catch((err) => {
