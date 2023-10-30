@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testApi": "mocha ./api/specs/createPost.js",
+    "testApi": "mocha ./api/specs/deletePost.js",
     "test": "jasmine",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
