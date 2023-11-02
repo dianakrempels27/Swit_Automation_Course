@@ -18,7 +18,7 @@ class UsersEndpoins extends BaseRequest {
     }, {
       "login": login,
       "password": password
-    })
+    });
   }
 
   createPost(token, body) {
@@ -33,6 +33,13 @@ class UsersEndpoins extends BaseRequest {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${token}`,
     })
+  }
+
+  addPost(token, body) {
+    return this.post("https://unit1105.p-host.kiev.ua", "/comment", {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
+    }, body)
   }
 }
 
