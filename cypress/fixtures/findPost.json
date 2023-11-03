@@ -1,0 +1,20 @@
+{
+    "_id": "65395a64fd56a263d8f13918",
+    "title": "Test post via API",
+    "description": "hello everyone!",
+    "content": "fwjfowfjkwl",
+    "imageUrl": "/uploads/image-1696498724103-896383774.jpg",
+    "author": {
+        "_id": "65102afafd56a263d8f13154",
+        "email": "diana@gmail.com",
+        "about": "Trying to become Automation QA!",
+        "birthday": "27.04.2000",
+        "country": "Ukraine",
+        "name": "Diana",
+        "nickname": "Bulka",
+        "surname": "KrempelsKrempels"
+    },
+    "createdAt": "2023-10-25T18:11:48.322Z",
+    "updatedAt": "2023-10-25T18:11:48.322Z",
+    "__v": 0
+}
