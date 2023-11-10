@@ -22,7 +22,7 @@ class UsersEndpoins extends BaseRequest {
   }
 
   createPost(token, body) {
-    return this.put("https://unit1105.p-host.kiev.ua", "/post/6544c095fd56a263d8f13bda", {
+    return this.post("https://unit1105.p-host.kiev.ua", "/post", {
       "Content-Type": "application/json",
       "Authorization": token,
     }, body)
@@ -42,11 +42,18 @@ class UsersEndpoins extends BaseRequest {
     }, body)
   }
 
-  editPost(token, body) {
-    return this.put("https://unit1105.p-host.kiev.ua", "/post/6544c095fd56a263d8f13bda", {
+  editPost(token, idPost, body) {
+    return this.put("https://unit1105.p-host.kiev.ua", `/post/${idPost}`, {
       "Content-Type": "application/json",
       "Authorization": token,
     }, body)
+  }
+
+  getPosts(token) {
+    return this.get("https://unit1105.p-host.kiev.ua", "/post", {
+      "Content-Type": "application/json",
+      "Authorization": token,
+    })
   }
 }
 

@@ -9,5 +9,15 @@ module.exports = defineConfig({
     screenshotsFolder:'cypress/screenshots',
     videosFolder:'cypress/videos',
     video: true,
+    reporter: 'mochawesome',
+    "reporterOptions": {
+      "charts": false,
+      "html": false,
+      "json": true,
+      "reportDir": "cypress/reports",
+      "reportFilename": "report",
+      "overwrite": false,
+      "screenshotOnRunFailure": true
+  },
   }
 });
