@@ -33,7 +33,7 @@ class BaseRequest {
 //DELETE method
     async delete(url, route, headers) {
         const result = await handleErrors(chai.request(url)
-           .get(route)
+           .delete(route)
            .set(headers));
        return result;
     }

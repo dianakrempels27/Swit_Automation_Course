@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testApi": "mocha ./api/specs/createPost.js",
+    "testApi": "mocha ./api/specs/addComment.js",
     "test": "jasmine",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --reporter mochawesome"
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@faker-js/faker": "^8.2.0",
+    "@faker-js/faker": "^8.3.1",
     "axios": "^1.4.0",
     "chai": "^4.3.10",
     "chai-http": "^4.4.0",

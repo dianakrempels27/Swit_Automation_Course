@@ -28,8 +28,8 @@ class UsersEndpoins extends BaseRequest {
     }, body)
   }
 
-  deletePost(token) {
-    return this.delete("https://unit1105.p-host.kiev.ua", "/post/6544c095fd56a263d8f13bda", {
+  deletePost(token, idPost) {
+    return this.delete("https://unit1105.p-host.kiev.ua", `/post/${idPost}`, {
       "Content-Type": "application/json",
       "Authorization": token,
     })
@@ -51,6 +51,13 @@ class UsersEndpoins extends BaseRequest {
 
   getPosts(token) {
     return this.get("https://unit1105.p-host.kiev.ua", "/post", {
+      "Content-Type": "application/json",
+      "Authorization": token,
+    })
+  }
+
+  getComments(token, idPost) {
+    return this.get("https://unit1105.p-host.kiev.ua", `/comment/${idPost}`, {
       "Content-Type": "application/json",
       "Authorization": token,
     })
